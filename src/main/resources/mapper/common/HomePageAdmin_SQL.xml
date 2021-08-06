@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="homePageAdminDAO">
+	
+ 	
+ 	<select id="selectHomepageAdminCnt" parameterType="hashmap" resultType="int">
+	select 		/* homePageAdminDAO.selectHomepageAdminCnt */
+	
+			count(*) 
+			
+	from 
+	
+			HOMEPAGE_ADMIN 
+			
+	where 1=1 
+	
+			and USE_YN = 'Y' 
+			and ID = #{ID} 
+			and PASS = #{shaPass}
+	</select>
+ 	
+ 	<insert id="insertArticleInfo"  parameterType="hashmap">
+	  
+		INSERT INTO BOARD /*programID = homePageAdminDAO.insertArticleInfo */
+			(
+				PARK_SEQ,
+				ID,
+				SUBJECT,
+				CONTENT,
+				MAIN_IMG,
+				USE_YN,
+				CREATE_DATE,
+				MOD_DATE
+			)
+		VALUES
+			(
+				'0',
+				#{id},
+				#{title},
+				#{content},
+				#{main_img},
+				'Y',
+				now(),
+				now()
+			)
+	</insert>
+	
+	<update id="updateArticleInfo"  parameterType="hashmap">
+	  
+		UPDATE BOARD /*programID = homePageAdminDAO.updateArticleInfo */
+			SET
+			SUBJECT = #{title},
+			CONTENT = #{content},
+			MAIN_IMG = #{main_img}
+		WHERE 1=1
+		AND SEQ = #{seq}
+		
+	</update>
+	
+	<update id="deleteArticleInfo"  parameterType="hashmap">
+	  
+		DELETE FROM BOARD /*programID = homePageAdminDAO.deleteArticleInfo */
+			
+		WHERE 1=1
+		AND SEQ = #{seq}
+		
+	</update>
+	
+	<select id="selectArticleInfo" parameterType="hashmap" resultType="hashmap">
+	<include refid="common.pagingPre"/> 
+	select 		/* homePageAdminDAO.selectArticleInfo */
+	
+			A.SEQ,
+			A.PARK_SEQ,
+			A.ID,
+			A.SUBJECT,
+			A.CONTENT,
+			A.USE_YN,
+			A.MAIN_IMG,
+			DATE_FORMAT(A.CREATE_DATE, '%Y-%m-%d') CREATE_DATE,
+			DATE_FORMAT(A.MOD_DATE, '%Y-%m-%d') MOD_DATE
+			
+	from 
+	
+			BOARD as A
+	
+	JOIN ( SELECT @rownum := 0) R
+	where 1=1
+	<if test="seq != null">
+		and A.SEQ = #{seq}
+	</if>
+
+	<include refid="common.pagingPost"/> 
+	</select>
+ 	
+ 	
+ 	
+</mapper>

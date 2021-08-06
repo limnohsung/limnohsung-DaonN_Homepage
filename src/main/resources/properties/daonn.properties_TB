@@ -1,0 +1,13 @@
+daonn.jdbc.driverClassName	= org.mariadb.jdbc.Driver
+daonn.jdbc.url				= jdbc:mysql://db.rigel.kr:3306/daonn
+daonn.jdbc.username			= daonn
+daonn.jdbc.password			= daonn1234
+daonn.email.host  = smtp.daum.net
+daonn.email.port  = 465
+daonn.email.id    = gomindpractice
+daonn.email.pw    = luna12#$
+daonn.uploadPath		= /home/jboss/data/daonn_img/
+daonn.htmlFolder.path		= C:/daonn_html/
+daonn.imgLoader.path		= http://daonn_img.lunalabs.net/
+daonn.websocket.url			= ws://localhost:8080/echo.do
+

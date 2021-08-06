@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-arrayuiv="X-UA-Compatible" content="ie=edge">
+  <title>TEST</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/test_css.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.js"></script>
+  <style>
+    
+    .wrap .animate{position: relative; zoom: 0.8;}
+    .animate div{transition-timing-function: linear;}
+    .animate .bottom{position: absolute; top: 550px; left: 500px;}
+    .animate .cam_1{position: absolute; top: 290px; left: 783px;}
+    .animate .num{position: absolute; top: 310px; left: 808px; display: none;}
+    .animate .body{position: absolute; top: 380px; left: 960px; z-index: 6;}
+    .animate .body img{width: 105px;}
+    .animate .bar{position: absolute; top: 410px; left: 1040px; z-index: 5; transform-origin: 15px 15px; transition-duration: .5s; }
+    .animate .bar img{width: 440px;}
+    .animate .cam_2{position: absolute; top: 250px; left: 1116px;}
+    .animate .cash{position: absolute; top: 350px; left: 520px;}
+    .animate .wheel{
+      position: absolute; top: 830px; left: 580px; z-index: 7;
+    }
+    .animate .wheel img{width: 95px;}
+    .animate .type01{position: absolute; top: 765px; left: 886px;}
+    .animate .car{
+      position: absolute; top: 650px;/* top: 570px; */ left: 0; /* left: 330px; */ z-index: 6;
+      transform: rotate(-3deg);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="animate">
+      <div class="bottom"><img src="imgs/ani/bottom.png" alt=""></div>
+      <div class="cam_1"><img src="imgs/ani/cam_1.png" alt=""></div>
+      <div class="num"><img src="imgs/ani/num.png" alt=""></div>
+      <div class="body"><img src="imgs/ani/body.png" alt=""></div>
+      <div class="bar"><img src="imgs/ani/bar.png" alt=""></div>
+      <div class="cam_2"><img src="imgs/ani/cam_2.png" alt=""></div>
+      <div class="cash"><img src="imgs/ani/cash.png" alt=""></div>
+      <!-- <div class="wheel"><img src="imgs/ani/wheel.gif" alt=""></div>
+      <div class="wheel type01"><img src="imgs/ani/wheel.gif" alt=""></div> -->
+      <div class="car"><img src="imgs/ani/car.png" alt=""></div>
+    </div>
+  </div>
+</body>
+
+<script>
+  
+  $('.animate div').mouseover(function(){
+    $(this).css({opacity : 0.8});
+  });
+  $('.animate div').mouseleave(function(){
+    $(this).css({opacity : 1});
+  });
+
+  $('.cash').click(function(){
+    $('.car img').attr({'src':'imgs/ani/car.gif'});
+    $('.car').animate({left: 330, top: 570}, 1500, function(){
+      $('.num').show();
+       $('.car img').attr({'src':'imgs/ani/car.png'});
+    });
+  });
+  $('.body').click(function(){
+    $('.car img').attr({'src':'imgs/ani/car.gif'});
+    $('.bar').css({'transform':'rotate(-120deg)'});
+    $('.car').animate({left: 1500, top: 420}, 2000, function(){
+      $('.bar').css({'transform':'rotate(0)'});
+      $('.car img').attr({'src':'imgs/ani/car.png'});
+      $('.num').hide();
+    });
+  });
+
+</script>
+
+</html>

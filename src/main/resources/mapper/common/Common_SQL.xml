@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="common">
+	
+	<select id="selectFileInfo" parameterType="hashmap" resultType="hashmap">
+		<![CDATA[
+			SELECT
+			    STORED_FILE_NAME,
+			    ORIGINAL_FILE_NAME
+			FROM
+			    TB_FILE
+			WHERE
+			    IDX = #{IDX}
+		]]>
+	</select>
+	
+	<sql id="pagingPre">
+	SELECT 
+			(cast((@rownum) as unsigned) - RNUM_ASC + 1) as RNUM_DESC,
+			cast((@rownum) as unsigned) total_count,
+			AAA.*
+	FROM 
+			(
+				SELECT 
+						cast((@rownum := @rownum + 1) as unsigned) RNUM_ASC,
+						AA.*
+			    FROM 
+						(
+ 	</sql>
+ 	
+ 	<sql id="pagingPost">
+		 				) AS AA
+		 	) AS AAA
+	limit #{START}, #{PAGE_ROW}
+ 	</sql>
+ 	
+ 	<sql id="adminPagingPost">
+		 				) AS AA
+		 	) AS AAA
+	limit #{ST}, #{PAGE_ROW}
+ 	</sql>
+ 	
+
+ 	
+</mapper>

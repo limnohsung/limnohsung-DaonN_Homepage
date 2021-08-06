@@ -1,0 +1,9 @@
+<%@ page pageEncoding="utf-8"%>
+
+<div class="lnbWrap">
+	<div class="lnb_bg"></div>
+	<ul class="lnb">
+		<li><a href="/jmw.do">지명원</a></li>
+		<li><a href="/catalogue.do">카탈로그</a></li>
+	</ul>
+</div>

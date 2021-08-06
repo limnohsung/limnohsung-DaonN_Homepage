@@ -1,0 +1,8 @@
+<%@ page pageEncoding="utf-8"%>
+
+<div class="lnbWrap">
+	<div class="lnb_bg"></div>	
+	<ul class="lnb">
+		<li><a href="/board.do">전체 게시판</a></li>
+	</ul>
+</div>

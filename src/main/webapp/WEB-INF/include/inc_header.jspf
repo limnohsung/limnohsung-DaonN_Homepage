@@ -1,0 +1,115 @@
+<%@ page pageEncoding="utf-8"%>
+<div class="top_btn">TOP</div>
+<div class="hdrWrap">
+	<div class="header">
+		<div class="logo"><a href="/main.do"></a></div>
+		<ul class="hdrCat">
+			<li><a href="/overview.do">회사소개</a></li>
+			<li><a href="/bizArea.do">시스템 구축</a></li>
+			<li><a href="/parkingControl.do">주차 시스템</a></li>
+			<li><a href="/jmw.do">브로셔</a></li>
+			<li><a href="/boardList.do">게시판</a></li>
+		</ul>
+		<div class="hdr_lnb_wrap">
+			<ul class="hdr_lnb">
+				<li>
+					<ul class="sub_menu">
+						<li><a class="on" href="/overview.do">개요</a></li>
+						<li><a href="/history.do">연혁</a></li>
+						<li><a href="/opPolicy.do">운영 방침</a></li>
+						<li><a href="/organization.do">조직도</a></li>
+						<li><a href="/certification.do">인/허가 현황</a></li>
+						<li><a href="/upcsCloud.do">통합 UPCS</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="sub_menu">
+						<li><a href="/bizArea.do">Biz.AREA</a></li>
+						<li><a href="/systemOp.do">System 운영</a></li>
+						<li><a href="/upcsDevice.do">UPCS장비사항</a></li>
+						<li><a href="/upcsSystem.do">System 구성도</a></li>
+						<li><a href="/inOutFlow.do">입/출차 FLOW</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="sub_menu">
+						<li><a href="/parkingControl.do">주차 제어 솔루션</a></li>
+						<li><a href="/webMobileService.do">Web & Mobile 솔루션</a></li>
+						<li><a href="/pesService.do">PES(주차환경개선 서비스)</a></li>
+						<li><a href="/opService.do">주차운영 서비스</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="sub_menu">
+						<li><a href="/jmw.do">지명원</a></li>
+						<li><a href="/catalogue.do">카탈로그</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul class="sub_menu">
+						<li><a href="/boardList.do">전체게시판</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="ham">
+	<ul>
+		<li class="bar1"></li>
+		<li class="bar2"></li>
+		<li class="bar3"></li>
+	</ul>
+</div>
+
+<div class="gray_bg"></div>
+
+<div class="menu_wrap">
+	<div class="all_menu_inner">
+		<ul class="menu_box clearfix">
+			<li>
+				<p class="fl">회사소개</p>
+				<ul class="dep2 fl type01">
+					<li><a href="/overview.do">개요</a></li>
+					<li><a href="/history.do">연혁</a></li>
+					<li><a href="/opPolicy.do">운영 방침</a></li>
+					<li><a href="/organization.do">조직도</a></li>
+					<li><a href="/certification.do">인/허가 현황</a></li>
+					<li><a href="/upcsCloud.do">통합 UPCS</a></li>
+				</ul>
+			</li>
+			<li>
+				<p class="fl">시스템 구축</p>
+				<ul class="dep2 fl type02">
+					<li><a href="/bizArea.do">Biz.AREA</a></li>
+					<li><a href="/systemOp.do">System 운영</a></li>
+					<li><a href="/upcsDevice.do">UPCS장비사항</a></li>
+					<li><a href="/upcsSystem.do">System 구성도</a></li>
+					<li><a href="/inOutFlow.do">입/출차 FLOW(체험)</a></li>
+				</ul>
+			</li>
+			<li>
+				<p class="fl">주차 시스템</p>
+				<ul class="dep2 fl type02">
+					<li><a href="/parkingControl.do">주차 제어 솔루션</a></li>
+					<li><a href="/webMobileService.do">Web & Mobile 솔루션</a></li>
+					<li><a href="/pesService.do">PES(주차환경개선 서비스)</a></li>
+					<li><a href="/opService.do">주차운영 서비스</a></li>
+				</ul>
+			</li>
+			<li>
+				<p class="fl">브로셔</p>
+				<ul class="dep2 fl type01">
+					<li><a href="/jmw.do">지명원</a></li>
+					<li><a href="/catalogue.do">카탈로그</a></li>
+				</ul>
+			</li>
+			<li>
+				<p class="fl">게시판</p>
+				<ul class="dep2 fl type01">
+					<li><a href="/boardList.do">전체게시판</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+<%@ page pageEncoding="utf-8"%>
+
+<div class="lnbWrap">
+	<div class="lnb_bg"></div>	
+	<ul class="lnb">
+		<li><a href="/bizArea.do">Biz.AREA</a></li>
+		<li><a href="/systemOp.do">System 운영</a></li>
+		<li><a href="/upcsDevice.do">UPCS장비사항</a></li>
+		<li><a href="/upcsSystem.do">System 구성도</a></li>
+		<li><a href="/inOutFlow.do">입/출차 FLOW (체험)</a></li>
+	</ul>
+</div>

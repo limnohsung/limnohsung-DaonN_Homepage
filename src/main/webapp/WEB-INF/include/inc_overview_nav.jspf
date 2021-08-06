@@ -1,0 +1,13 @@
+<%@ page pageEncoding="utf-8"%>
+
+<div class="lnbWrap">
+	<div class="lnb_bg"></div>	
+	<ul class="lnb">
+		<li><a href="/overview.do">개요</a></li>
+		<li><a href="/history.do">연혁</a></li>
+		<li><a href="/opPolicy.do">운영 방침</a></li>
+		<li><a href="/organization.do">조직도</a></li>
+		<li><a href="/certification.do">인/허가 현황</a></li>
+		<li><a href="/upcsCloud.do">통합 UPCS</a></li>
+	</ul>
+</div>

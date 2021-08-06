@@ -1,0 +1,11 @@
+<%@ page pageEncoding="utf-8"%>
+
+<div class="ftrWrap section fp-auto-height">
+	<div class="footer">
+		<div class="logo"></div>
+		<p>
+			서울 강남구 논현로 10길 29, 4층<br> TEL : 02-3495-0069 FAX : 02-3495-0039<br>
+			Copyright 2019 <a href="/login.do">DAON&</a> INC. All Rights Reserved.</a>
+		</p>
+	</div>
+</div>
